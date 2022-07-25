@@ -18,9 +18,10 @@ export default function App() {
   return (
     <View style={styles.container}>
       <FlatList
+        keyExtractor={(item) => item.id}
         data={personajes}
         renderItem={({ item }) => (
-          <View style={{ padding: 10,margin:10,backgroundColor:"#c3c3c3" }}>
+          <View style={{ padding: 10, margin: 10, backgroundColor: "#c3c3c3" }}>
             <Text>{item.name}</Text>
             <Text>{item.status}</Text>
 
